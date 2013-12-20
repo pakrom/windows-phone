@@ -1,0 +1,99 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Страшные_истории_wp8.Author"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
+    toolkit:TiltEffect.IsTiltEnabled="True"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False">
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/at.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="СТРАШНЫЕ ИСТОРИИ" Style="{StaticResource PhoneTextNormalStyle}" 
+                       Foreground="Red"/>
+            <TextBlock Text="об авторе" Margin="9,-7,0,0" 
+                       Style="{StaticResource PhoneTextTitle1Style}" Foreground="Red"/>
+        </StackPanel>
+
+        <ListBox x:Name="v" Grid.Row="1" Margin="12,0,0,0" 
+                 ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <TextBlock toolkit:TiltEffect.IsTiltEnabled="False" TextWrapping="Wrap" 
+                       Margin="12,0" FontSize="42" Height="90" >
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{StaticResource PhoneBorderColor}"/>
+                </TextBlock.Foreground>
+                <Run Text="Александр Гаврилов" />
+            </TextBlock>
+            <StackPanel Margin="12,5" Tap="ListBoxItem_Tap_1"  Orientation="Horizontal" >
+                <Image Source="/Assets/VK.png" Height="50" Width="50"/>
+                <TextBlock Text="ВКонтакте" TextWrapping="Wrap" Margin="10,0" Width="344"
+                           Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                           FontSize="{StaticResource PhoneFontSizeLarge}">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{StaticResource PhoneBorderColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Margin="12,5" Tap="ListBoxItem_Tap_2"  Orientation="Horizontal" >
+                <Image Source="/Assets/Fc.png" Height="50" Width="50"/>
+                <TextBlock Text="Facebook" TextWrapping="Wrap" Margin="10,0" Width="344"
+                            Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="{StaticResource PhoneFontSizeLarge}">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{StaticResource PhoneBorderColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Margin="12,5" Orientation="Horizontal" Tap="ListBoxItem_Tap_3" >
+                <Image Source="/Assets/Sp.png" Height="50" Width="50" />
+                <TextBlock Text="Spaces.ru" TextWrapping="Wrap" Margin="10,0" Width="344"
+                             Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                             FontSize="{StaticResource PhoneFontSizeLarge}">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{StaticResource PhoneBorderColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Margin="12,5" Orientation="Horizontal" Tap="ListBoxItem_Tap_4" >
+                <Border>
+                    <Border.Background>
+                        <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                    </Border.Background>
+                    <Image Source="/Assets/OC.png" Height="50" Width="50"/>
+                </Border>
+                <TextBlock Text="Почта" TextWrapping="Wrap" Margin="10,0" Width="344"
+                           Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                           FontSize="{StaticResource PhoneFontSizeLarge}">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{StaticResource PhoneBorderColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </StackPanel>
+            <TextBlock Margin="12,10" toolkit:TiltEffect.IsTiltEnabled="False" 
+                       HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="22"  >
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{StaticResource PhoneBorderColor}"/>
+                </TextBlock.Foreground>
+                <Run Text="Если вас что-то не устраивает или есть предложения для улучшения приложения, пишите. Обратная связь приветствуется :)" />
+            </TextBlock>
+        </ListBox>
+    </Grid>
+
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Страшные_истории_wp8.VVideo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot представляет корневую сетку, где размещается все содержимое страницы-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel содержит имя приложения и заголовок страницы-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="СТРАШНЫЕ ИСТОРИИ" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel – поместите здесь дополнительное содержимое-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <ListBox Margin="12,0" x:Name="h">
+                    <!--<StackPanel Orientation="Horizontal"  Width="432" Margin="24,0,0,0">
+                        <TextBlock x:Name="date" TextWrapping="NoWrap" Width="170" >
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource PhoneSubtleColor}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <TextBlock x:Name="author" TextWrapping="NoWrap" Width="262" TextAlignment="Right">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource PhoneSubtleColor}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </StackPanel>-->
+                    <!--<TextBlock x:Name="title"  Style="{StaticResource PhoneTextNormalStyle}" Margin="24,0,0,0"
+                       FontFamily="Segoe WP Black" TextWrapping="Wrap" Width="431" FontSize="26.667">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{StaticResource PhoneForegroundColor}"/>
+                        </TextBlock.Foreground>
+                    </TextBlock>-->
+                    <StackPanel x:Name="images"  Height="250">
+                        <Image x:Name="image" Height="432" Width="432" Margin="0" Stretch="UniformToFill" 
+                            RenderTransformOrigin="0.5,0.5">        
+                        </Image>
+                    </StackPanel>
+                    <!--<StackPanel Margin="12,0" Orientation="Horizontal">
+                <Button Content="Вконтакте" Width="230"/>
+                <Button Content="Facebook" Width="230"/>
+            </StackPanel>-->
+                    <!--<StackPanel x:Name="text" Width="456" />-->
+                    <!--<Button Content="В начало" Height="78" Width="460" BorderThickness="3" 
+                    HorizontalAlignment="Center" Margin="10,0,0,0" Tap="Button_Tap_1"/>-->
+                <StackPanel Margin="0,24" Orientation="Horizontal">
+                    <TextBlock Width="108" Text="240" />
+                    <TextBlock Width="108" Text="360" />
+                    <TextBlock Width="108" Text="480" />
+                    <TextBlock Width="108" Text="720" />
+                </StackPanel>
+                <TextBlock Width="432"/>
+            </ListBox>
+            </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,4 @@
+C:\Users\Александр\Documents\Visual Studio 2012\Projects\Страшные истории WP8\Agent\Bin\Release\Agent.dll
+C:\Users\Александр\Documents\Visual Studio 2012\Projects\Страшные истории WP8\Agent\Bin\Release\Agent.pdb
+C:\Users\Александр\Documents\Visual Studio 2012\Projects\Страшные истории WP8\Agent\obj\Release\Agent.dll
+C:\Users\Александр\Documents\Visual Studio 2012\Projects\Страшные истории WP8\Agent\obj\Release\Agent.pdb
